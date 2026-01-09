@@ -1,0 +1,6 @@
+# robots.txt for Kritanta
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://kritanta.com/sitemap.xml
