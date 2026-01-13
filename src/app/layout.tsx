@@ -1,9 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
-import { CartProvider } from "@/context/CartContext";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import CartDrawer from "@/components/ui/CartDrawer";
 import ToastContainer from "@/components/ui/ToastContainer";
 
 export const viewport: Viewport = {
@@ -14,20 +12,23 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
     title: {
-        default: "Kritanta - Premium Wall Art & Custom Posters",
+        default: "Kritanta - Divine Wallpapers & Premium Downloads",
         template: "%s | Kritanta",
     },
     description:
-        "India's No. 1 custom poster selling site. Shop premium wall art, anime posters, music posters, and create your own custom designs.",
+        "Discover and download stunning divine wallpapers featuring Hindu gods and spiritual artwork. Free downloads and premium subscription for exclusive content.",
     keywords: [
-        "posters",
-        "wall art",
-        "custom posters",
-        "anime posters",
-        "music posters",
-        "home decor",
-        "India",
-        "buy posters online",
+        "wallpapers",
+        "divine wallpapers",
+        "hindu gods wallpapers",
+        "spiritual wallpapers",
+        "free downloads",
+        "premium wallpapers",
+        "desktop wallpapers",
+        "mobile wallpapers",
+        "Hanuman wallpapers",
+        "Krishna wallpapers",
+        "Shiva wallpapers",
     ],
     authors: [{ name: "Kritanta" }],
     creator: "Kritanta",
@@ -44,15 +45,15 @@ export const metadata: Metadata = {
         type: "website",
         locale: "en_IN",
         siteName: "Kritanta",
-        title: "Kritanta - Premium Wall Art & Custom Posters",
+        title: "Kritanta - Divine Wallpapers & Premium Downloads",
         description:
-            "Transform your space with stunning wall art. Custom posters, anime art, spiritual designs & more.",
+            "Discover and download stunning divine wallpapers. High-resolution artwork of Hindu gods for desktop & mobile.",
     },
     twitter: {
         card: "summary_large_image",
-        title: "Kritanta - Premium Wall Art & Custom Posters",
+        title: "Kritanta - Divine Wallpapers & Premium Downloads",
         description:
-            "Transform your space with stunning wall art. Custom posters, anime art, spiritual designs & more.",
+            "Discover and download stunning divine wallpapers. High-resolution artwork of Hindu gods for desktop & mobile.",
     },
     robots: {
         index: true,
@@ -69,13 +70,10 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className="antialiased">
-                <CartProvider>
-                    <Header />
-                    <main className="min-h-screen">{children}</main>
-                    <Footer />
-                    <CartDrawer />
-                    <ToastContainer />
-                </CartProvider>
+                <Header />
+                <main className="min-h-screen">{children}</main>
+                <Footer />
+                <ToastContainer />
             </body>
         </html>
     );

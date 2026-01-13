@@ -6,6 +6,10 @@ const nextConfig = {
                 protocol: "https",
                 hostname: "placehold.co",
             },
+            {
+                protocol: "https",
+                hostname: "kritanta.com",
+            },
         ],
         // Enable image optimization on Vercel
         unoptimized: process.env.NODE_ENV === 'development',

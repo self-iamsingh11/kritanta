@@ -2,20 +2,19 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { Send, CreditCard, Shield, Truck, Star } from "lucide-react";
+import { Send, Download, Shield, Smartphone, Star } from "lucide-react";
 
 const footerLinks = {
     quickLinks: [
-        { label: "Search", href: "/search" },
+        { label: "Browse Wallpapers", href: "/" },
+        { label: "Premium", href: "/premium" },
         { label: "Contact Us", href: "/pages/contact" },
-        { label: "Customer Reviews", href: "/pages/reviews" },
-        { label: "Track Order", href: "/pages/track" },
+        { label: "FAQ", href: "/pages/faq" },
     ],
     policies: [
-        { label: "Refund Policy", href: "/policies/refund" },
         { label: "Privacy Policy", href: "/policies/privacy" },
         { label: "Terms of Service", href: "/policies/terms" },
-        { label: "Shipping Policy", href: "/policies/shipping" },
+        { label: "Content Guidelines", href: "/policies/content" },
     ],
 };
 
@@ -37,20 +36,11 @@ export default function Footer() {
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                         <div className="flex items-center gap-3">
                             <div className="w-12 h-12 bg-brand-mustard/20 rounded-full flex items-center justify-center">
-                                <Truck className="w-6 h-6 text-brand-mustard" />
+                                <Download className="w-6 h-6 text-brand-mustard" />
                             </div>
                             <div>
-                                <span className="font-bold block">Free Shipping</span>
-                                <span className="text-sm text-gray-400">On prepaid orders</span>
-                            </div>
-                        </div>
-                        <div className="flex items-center gap-3">
-                            <div className="w-12 h-12 bg-brand-mustard/20 rounded-full flex items-center justify-center">
-                                <Shield className="w-6 h-6 text-brand-mustard" />
-                            </div>
-                            <div>
-                                <span className="font-bold block">Secure Checkout</span>
-                                <span className="text-sm text-gray-400">100% safe payments</span>
+                                <span className="font-bold block">Free Downloads</span>
+                                <span className="text-sm text-gray-400">No signup required</span>
                             </div>
                         </div>
                         <div className="flex items-center gap-3">
@@ -58,17 +48,26 @@ export default function Footer() {
                                 <Star className="w-6 h-6 text-brand-mustard" />
                             </div>
                             <div>
-                                <span className="font-bold block">Premium Quality</span>
-                                <span className="text-sm text-gray-400">High-res prints</span>
+                                <span className="font-bold block">High Resolution</span>
+                                <span className="text-sm text-gray-400">4K+ quality images</span>
                             </div>
                         </div>
                         <div className="flex items-center gap-3">
                             <div className="w-12 h-12 bg-brand-mustard/20 rounded-full flex items-center justify-center">
-                                <CreditCard className="w-6 h-6 text-brand-mustard" />
+                                <Smartphone className="w-6 h-6 text-brand-mustard" />
                             </div>
                             <div>
-                                <span className="font-bold block">Easy Returns</span>
-                                <span className="text-sm text-gray-400">7-day return policy</span>
+                                <span className="font-bold block">All Devices</span>
+                                <span className="text-sm text-gray-400">Desktop & Mobile</span>
+                            </div>
+                        </div>
+                        <div className="flex items-center gap-3">
+                            <div className="w-12 h-12 bg-brand-mustard/20 rounded-full flex items-center justify-center">
+                                <Shield className="w-6 h-6 text-brand-mustard" />
+                            </div>
+                            <div>
+                                <span className="font-bold block">Premium Content</span>
+                                <span className="text-sm text-gray-400">Exclusive artwork</span>
                             </div>
                         </div>
                     </div>
@@ -82,11 +81,11 @@ export default function Footer() {
                     <div>
                         <h3 className="font-display text-2xl font-bold mb-4">KRITANTA</h3>
                         <p className="text-gray-400 text-sm leading-relaxed mb-4">
-                            India&apos;s No. 1 custom poster selling site. We specialize in premium
-                            quality wall art that transforms your space into a work of art.
+                            Your destination for divine wallpapers. Download high-resolution
+                            artwork of Hindu gods and spiritual imagery for your desktop and mobile.
                         </p>
                         <p className="text-gray-400 text-sm">
-                            <strong className="text-white">100,000+</strong> Happy Customers
+                            <strong className="text-white">50,000+</strong> Downloads & Growing
                         </p>
                     </div>
 
@@ -131,10 +130,10 @@ export default function Footer() {
                     {/* Newsletter */}
                     <div>
                         <h4 className="font-bold text-lg mb-4 uppercase tracking-wide">
-                            Newsletter
+                            Stay Updated
                         </h4>
                         <p className="text-gray-400 text-sm mb-4">
-                            Subscribe to get special offers, free giveaways, and exclusive deals.
+                            Subscribe to get notified about new wallpaper releases and exclusive content.
                         </p>
                         <form onSubmit={handleNewsletterSubmit} className="flex">
                             <input
@@ -162,54 +161,10 @@ export default function Footer() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
                     <div className="flex flex-col md:flex-row items-center justify-between gap-4">
                         <p className="text-gray-400 text-sm">
-                            © 2024 Kritanta. All rights reserved.
+                            © 2024 Kritanta. All rights reserved. Made with ❤️ for devotees worldwide.
                         </p>
-
-                        {/* Payment Icons */}
-                        <div className="flex items-center gap-4">
-                            <span className="text-sm text-gray-400">We accept:</span>
-                            <div className="flex items-center gap-3">
-                                {/* Visa */}
-                                <div className="w-10 h-6 bg-white rounded flex items-center justify-center">
-                                    <svg viewBox="0 0 48 32" className="w-8 h-5">
-                                        <rect fill="#1a1f71" width="48" height="32" rx="4" />
-                                        <text
-                                            x="24"
-                                            y="20"
-                                            fill="white"
-                                            fontSize="12"
-                                            fontWeight="bold"
-                                            textAnchor="middle"
-                                        >
-                                            VISA
-                                        </text>
-                                    </svg>
-                                </div>
-                                {/* Mastercard */}
-                                <div className="w-10 h-6 bg-white rounded flex items-center justify-center">
-                                    <svg viewBox="0 0 48 32" className="w-8 h-5">
-                                        <rect fill="#f5f5f5" width="48" height="32" rx="4" />
-                                        <circle cx="18" cy="16" r="8" fill="#eb001b" />
-                                        <circle cx="30" cy="16" r="8" fill="#f79e1b" />
-                                    </svg>
-                                </div>
-                                {/* UPI */}
-                                <div className="w-10 h-6 bg-white rounded flex items-center justify-center">
-                                    <svg viewBox="0 0 48 32" className="w-8 h-5">
-                                        <rect fill="#5a5f6d" width="48" height="32" rx="4" />
-                                        <text
-                                            x="24"
-                                            y="20"
-                                            fill="white"
-                                            fontSize="10"
-                                            fontWeight="bold"
-                                            textAnchor="middle"
-                                        >
-                                            UPI
-                                        </text>
-                                    </svg>
-                                </div>
-                            </div>
+                        <div className="flex items-center gap-4 text-gray-400 text-sm">
+                            <span>Free wallpapers for personal use</span>
                         </div>
                     </div>
                 </div>
